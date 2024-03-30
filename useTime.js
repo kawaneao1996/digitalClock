@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 export const useTime = (interval) => {
     const [time, setTime] = useState(new Date());
 
