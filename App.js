@@ -1,11 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import dayjs from 'dayjs';
 
 export default function App() {
+  const time = useTime(1000);
+  const formattedTime = dayjs(time).format('HH:mm:ss');
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text>
+        {formattedTime}
+      </Text>
     </View>
   );
 }
